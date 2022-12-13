@@ -1,0 +1,46 @@
+body
+{
+    width : 500px;
+}
+h1{
+    text-align: center;
+    color:rgb(19, 19, 143);
+}
+h2{
+    color:rgb(19, 19, 143);
+}
+a{
+    width: 20px;
+    border : 1px black solid;
+    border-radius: 5px; 
+    margin: 10px;
+    padding : 10px;
+    text-decoration: none;
+    color:green;
+    background-color: rgb(187, 185, 185);
+}
+table{
+    width: 100%;
+    margin : 10px;
+    padding: 10px;
+}
+th{
+    text-align: center;
+    border : 1px lightgray solid; 
+    margin: 2px;
+    padding : 2px;
+}
+td{
+    border : 1px lightgray solid; 
+    margin: 2px;
+    padding : 2px;
+}
+th.namecss{
+    width: 20%;
+    border : 1px lightgray solid; 
+    margin: 2px;
+    padding : 2px;
+}
+tr.row{
+    height: 40px;
+}
