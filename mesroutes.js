@@ -2,25 +2,29 @@ const { application } = require('express');
 let express = require('express');
 let router = express.Router();
 
-tNames = [{
-    name:'JAVA',
-    prix:'200',
-    debut:'06-12-2022',
-    end:'07-12-2021'
-},{
-    name:'C#',
-    prix:'100',
-    debut:'07-12-2022',
-    end:'08-12-2021'
-}]
+let formationController = require('./controller/formationController.js')
 
 router.get('/',(req,res) => {
-    res.render('home.ejs', {tNames: tNames});
+    res.redirect('/home');
 });
 
-router.post('/',(req,res) =>{
-    console.log(req.body);
-    res.send('hello' +req.body.myname);
+router.get('/home', formationController.formList);
+
+router.get('/home/:i',formationController.formInscri);
+
+router.get('/panier',formationController.formPanier);
+
+router.get('/panier/:i',formationController.formDInscri);
+
+router.get('/connect',(req,res) => {
+    //variable ejs à rajouter: value="<%= pseudo %> "
+    
+    res.render('connect.ejs');
 });
+
+router.post('/connect',(req,res) =>{
+    res.redirect('/');
+});
+
 
 module.exports = router;

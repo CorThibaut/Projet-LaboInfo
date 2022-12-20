@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <title>Panier</title>
+</head>
+<body>
+    <h1>It Academy</h1>
+    <h2>Panier</h2>
+    <div>
+        <a href="/connect"><strong>Se connecter</strong></a> <a href="/home"><strong>Catalogue</strong></a> 
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>id</th><th class="namecss">Nom</th><th>Prix</th><th class="namecss">Début</th><th class="namecss">Fin</th><th></th>
+            </tr>
+
+            <% if(tNames.length>0){ %>
+                <% for(let i=0; i<tNames.length ; i++){ %> 
+                    <tr id=ListeForm<%=i %> class="row" >
+                        <td><%= i+1 %></td>
+                        <td><%= tNames[i].name %></td>
+                        <td><%= tNames[i].prize %></td>
+                        <td><%= tNames[i].startDate %></td>
+                        <td><%= tNames[i].endDate %></td>
+                        <td><a href="/panier/<%=i %> ">Supprimer</a></td>
+                    </tr>
+                <% } %>
+            <%}else{ %> 
+            <% } %>
+        </table>
+    </div>
+</body>
+</html>

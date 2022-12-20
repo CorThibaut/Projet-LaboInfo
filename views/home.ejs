@@ -11,7 +11,7 @@
     <h1>IT Academy</h1>
     <h2>Formations disponibles</h2>
     <div>
-        <a href="/panier"><strong>Panier</strong></a>    <a href="/connect"><strong>Se connecter</strong></a>
+        <a href="/connect"><strong>Se connecter</strong></a> <a href="/panier"><strong>Panier</strong></a> 
     </div>
     <div>
         <table>
@@ -24,14 +24,13 @@
                     <tr id=ListeForm<%=i %> class="row" >
                         <td><%= i+1 %></td>
                         <td><%= tNames[i].name %></td>
-                        <td><%= tNames[i].prix %></td>
-                        <td><%= tNames[i].debut %></td>
-                        <td><%= tNames[i].end %></td>
-                        <td><a href="/<%=i %> ">S'inscrire</a></td>
+                        <td><%= tNames[i].prize %></td>
+                        <td><%= tNames[i].startDate %></td>
+                        <td><%= tNames[i].endDate %></td>
+                        <td><a href="/home/<%=i %> ">S'inscrire</a></td>
                     </tr>
                 <% } %>
             <%}else{ %> 
-                <p>No Data available</p>
             <% } %>
         </table>
     </div>
